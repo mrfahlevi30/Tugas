@@ -1,0 +1,51 @@
+// Deklarasi Library
+#include <stdio.h>
+
+int main (){
+    //Deklarasi Variabel
+    float bil1, bil2, hasil;
+    char operasi;
+    
+    //Input
+    printf("Selamat datang di Kalkulator sederhana, Silahkan pilih ingin sesuai dengan kebutuhan: \n");
+    printf("1. Perkalian (*)\n");
+    printf("2. Pembagian (/)\n");
+    printf("3. Penjumlahan (+)\n");
+    printf("4. Pengurangan (-)\n");
+    
+    printf(" Operasi yang digunakan: ");
+    scanf("%c", &operasi);
+    
+    printf("Silahkan masukan Bilangan-1: ");
+    scanf("%f", &bil1);
+    printf("Silahkan masukan Bilangan-2: ");
+    scanf("%f", &bil2);
+    
+    switch(operasi){
+        case '*':
+        hasil = bil1 * bil2;
+        break;
+        
+        case '/':
+        if (bil2 != 0){
+            hasil = bil1 / bil2;
+        } else {
+            printf("Unidentified result");
+        }
+        break;
+        
+        case '+':
+        hasil = bil1 + bil2;
+        break;
+        
+        case '-':
+        hasil = bil1 - bil2;
+        break;
+    }
+    
+    printf("Hasil operasi dari %.2f %c %.2f adalah: ", bil1, operasi, bil2);
+    printf("%.2f", hasil);
+    return 0;
+    
+    
+}
